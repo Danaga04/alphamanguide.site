@@ -2,73 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Page</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      background: #000;
-      color: #fff;
+    html, body{
+      width:100%;
+      background:#000;
       font-family: Arial, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      overflow-x:hidden;
+      color:#fff;
     }
 
-    .container {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex: 1;
+    body{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
     }
 
-    .video-wrapper {
-      width: 100%;
-      max-width: 400px;
+    .video-wrapper{
+      width:100%;
+      max-width:400px;
     }
 
-    footer {
-      width: 100%;
-      text-align: center;
-      padding: 25px 15px;
-      font-size: 13px;
-      color: #777;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      background: #000;
-      line-height: 1.6;
+    .footer{
+      width:100%;
+      max-width:400px;
+      padding:20px 15px 40px;
+      text-align:center;
+      font-size:12px;
+      line-height:1.7;
+      color:#999;
     }
 
-    @media (max-width: 480px) {
-      footer {
-        font-size: 12px;
-        padding: 20px 12px;
+    .footer a{
+      color:#ccc;
+      text-decoration:none;
+    }
+
+    .footer a:hover{
+      text-decoration:underline;
+    }
+
+    @media (max-width:480px){
+      .footer{
+        font-size:11px;
+        padding:18px 14px 35px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="video-wrapper">
-
-<vturb-smartplayer id="vid-6a051317660e8c12a9933c72" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6a051317660e8c12a9933c72/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
-
-      
+  <div class="video-wrapper">
+    <vturb-smartplayer id="vid-6a051317660e8c12a9933c72" style="display:block;margin:0 auto;width:100%;max-width:400px;"></vturb-smartplayer>
   </div>
 
-  <footer>
-    © 2026 All Rights Reserved.<br>
-    This website is not affiliated with Facebook, Google, or any third-party platform.<br>
-    Results may vary from person to person.
-  </footer>
+  <script type="text/javascript">
+    var s = document.createElement("script");
+    s.src = "https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6a051317660e8c12a9933c72/v4/player.js";
+    s.async = true;
+    document.head.appendChild(s);
+  </script>
+
+  <div class="footer">
+    © 2026 All Rights Reserved.<br><br>
+
+    This site is not affiliated with Facebook, Google, or any Facebook/Google entity.<br>
+    Results may vary from person to person.<br><br>
+
+    By using this website, you agree to our
+    <a href="#">Terms of Service</a>
+    and
+    <a href="#">Privacy Policy</a>.
+  </div>
 
 </body>
 </html>
