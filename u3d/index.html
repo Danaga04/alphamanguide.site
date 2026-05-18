@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Optional Upgrade — Intimate Wellness</title>
 
-<!-- Digistore24 Trusted Badge -->
-<script type="text/javascript" src="https://www.digistore24.com/trusted-badge/45038/EfkrAuwxyTyKoSt/salespage"></script>
-
 <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
 <script>digistoreUpsell()</script>
 
@@ -15,10 +12,11 @@
 :root{
   --bg:#faf7f6;
   --card:#ffffff;
-  --primary:#be185d;
+  --primary:#16a34a;
   --dark:#111827;
   --muted:#6b7280;
   --danger:#b91c1c;
+  --reject:#dc2626;
 }
 
 *{
@@ -110,6 +108,7 @@ ul{
   font-size:18px;
   font-weight:700;
   transition:.2s;
+  border:none;
 }
 
 .accept{
@@ -122,12 +121,29 @@ ul{
   transform:scale(1.02);
 }
 
-.decline{
+.button-price{
+  margin-top:12px;
+  font-size:18px;
+  font-weight:700;
+  color:var(--dark);
+}
+
+.reject-btn{
   display:block;
-  margin-top:16px;
-  color:#666;
-  text-decoration:underline;
-  font-size:14px;
+  width:100%;
+  background:var(--reject);
+  color:#fff;
+  padding:16px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:700;
+  margin-top:18px;
+  transition:.2s;
+}
+
+.reject-btn:hover{
+  transform:scale(1.02);
 }
 
 .guarantee{
@@ -194,11 +210,15 @@ The educational content includes wellness-oriented intimacy tips, guided lessons
 </ul>
 
 <a href="https://www.checkout-ds24.com/answer/yes?template=light" class="btn accept">
-YES! ADD THIS GUIDE TO MY ORDER
+BUY NOW — ADD THIS GUIDE TO MY ORDER
 </a>
 
-<a href="https://www.checkout-ds24.com/answer/no" class="decline">
-No thanks, continue to my purchase
+<div class="button-price">
+One-Time Charge: $79
+</div>
+
+<a href="https://www.checkout-ds24.com/answer/no" class="reject-btn">
+NO THANKS — I DON'T WANT THIS OPTIONAL GUIDE
 </a>
 
 <div class="guarantee">
