@@ -1,252 +1,408 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Optional Upgrade — Sacred Touch Massage Guide</title>
 
-<script src=" https://www.digistore24-scripts.com/service/digistore.js "></script>
+<script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
 <script>digistoreUpsell()</script>
 
+<!-- Begin of Digistore24 Trusted Badge Code -->
+<script type="text/javascript" src="https://www.digistore24.com/trusted-badge/45038/EfkrAuwxyTyKoSt/salespage"></script>
+<!-- End of Digistore24 Trusted Badge Code -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sacred Touch</title>
+
 <style>
-:root{
-  --bg:#f7f5f2;
-  --card:#ffffff;
-  --primary:#16a34a;
-  --dark:#111827;
-  --muted:#6b7280;
-  --danger:#b91c1c;
-  --reject:#dc2626;
-}
 
 *{
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-  margin:0;
-  padding:0;
-  background:var(--bg);
-  font-family:Poppins, Arial, sans-serif;
-  color:var(--dark);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:#ffffff;
+    color:#222;
+}
+
+.warning-banner{
+    background:#c41e3a;
+    color:#fff;
+    padding:12px 20px;
+    text-align:center;
+    font-size:14px;
+    font-weight:600;
+}
+
+.secure-badge{
+    background:#fff;
+    padding:15px;
+    display:flex;
+    justify-content:flex-end;
+    border-bottom:1px solid #eee;
+}
+
+.secure-badge img{
+    max-width:150px;
+}
+
+.nav-tabs{
+    display:flex;
+    width:100%;
+}
+
+.nav-tab{
+    flex:1;
+    text-align:center;
+    padding:14px 8px;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.completed{
+    background:#1e5a96;
+    color:#fff;
+}
+
+.active{
+    background:#27af60;
+    color:#fff;
+}
+
+.pending{
+    background:#95a5a6;
+    color:#fff;
 }
 
 .container{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:30px 15px;
+    width:100%;
+    max-width:760px;
+    margin:0 auto;
+    padding:25px 18px 60px;
 }
 
-.card{
-  width:100%;
-  max-width:720px;
-  background:var(--card);
-  border-radius:18px;
-  padding:40px 28px;
-  text-align:center;
-  box-shadow:0 10px 40px rgba(0,0,0,.08);
-}
-
-.alert{
-  background:var(--danger);
-  color:#fff;
-  padding:12px;
-  border-radius:10px;
-  font-size:15px;
-  font-weight:700;
-  margin-bottom:20px;
-  text-transform:uppercase;
-}
-
-.tag{
-  color:var(--primary);
-  font-size:14px;
-  font-weight:700;
-  text-transform:uppercase;
-  margin-bottom:10px;
+.content-box{
+    text-align:center;
 }
 
 h1{
-  font-size:32px;
-  line-height:1.2;
-  margin-bottom:15px;
+    font-size:36px;
+    line-height:1.2;
+    color:#111;
+    margin-bottom:15px;
+    font-weight:800;
+}
+
+.subtitle{
+    font-size:20px;
+    color:#444;
+    margin-bottom:25px;
+}
+
+.arrow-down{
+    font-size:42px;
+    color:#27af60;
+    margin-bottom:25px;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    0%,20%,50%,80%,100%{
+        transform:translateY(0);
+    }
+    40%{
+        transform:translateY(-10px);
+    }
+    60%{
+        transform:translateY(-5px);
+    }
+}
+
+.tsl-wrapper{
+    text-align:left;
+    font-size:21px;
+    line-height:1.8;
+    color:#222;
+}
+
+.tsl-wrapper p{
+    margin-bottom:26px;
+}
+
+.tsl-wrapper strong{
+    color:#000;
 }
 
 .highlight{
-  color:var(--primary);
+    background:yellow;
+    padding:2px 4px;
+    font-weight:700;
 }
 
-.price{
-  color:var(--primary);
-  font-size:28px;
-  font-weight:700;
-  margin-bottom:20px;
+.decision-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    width:100%;
+    max-width:520px;
+    margin:35px auto 35px;
 }
 
-p{
-  color:var(--muted);
-  line-height:1.7;
-  font-size:16px;
+.btn-yes{
+    display:block;
+    width:100%;
+    background:#25D366;
+    color:#fff;
+    text-align:center;
+    padding:22px 20px;
+    font-size:24px;
+    font-weight:900;
+    text-transform:uppercase;
+    text-decoration:none;
+    border-radius:10px;
+    box-shadow:0 4px 18px rgba(37,211,102,.4);
+    animation:pulse-green 1.5s infinite;
+    transition:.2s;
 }
 
-ul{
-  text-align:left;
-  max-width:520px;
-  margin:25px auto;
-  color:var(--muted);
-  line-height:1.8;
+.btn-yes:hover{
+    transform:scale(1.02);
 }
 
-.btn{
-  display:block;
-  width:100%;
-  padding:18px;
-  border-radius:12px;
-  text-decoration:none;
-  font-size:18px;
-  font-weight:700;
-  transition:.2s;
-  border:none;
+.btn-no{
+    color:#777;
+    font-size:15px;
+    text-decoration:underline;
 }
 
-.accept{
-  background:var(--primary);
-  color:#fff;
-  margin-top:10px;
+@keyframes pulse-green{
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(37,211,102,.7);
+    }
+    70%{
+        transform:scale(1.03);
+        box-shadow:0 0 0 18px rgba(37,211,102,0);
+    }
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+    }
 }
 
-.accept:hover{
-  transform:scale(1.02);
+.sound-notice{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:35px;
+    padding:15px;
+    background:#f8f9fa;
+    border-radius:8px;
+    border:1px solid #eee;
+    font-size:15px;
 }
 
-.button-price{
-  margin-top:12px;
-  font-size:18px;
-  font-weight:700;
-  color:var(--dark);
+@media(max-width:768px){
+
+    h1{
+        font-size:28px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+    .tsl-wrapper{
+        font-size:18px;
+        line-height:1.7;
+    }
+
+    .btn-yes{
+        font-size:20px;
+        padding:18px 14px;
+    }
+
+    .nav-tab{
+        font-size:10px;
+        padding:12px 5px;
+    }
+
 }
 
-.reject-btn{
-  display:block;
-  width:100%;
-  background:var(--reject);
-  color:#fff;
-  padding:16px;
-  border-radius:12px;
-  text-decoration:none;
-  font-size:16px;
-  font-weight:700;
-  margin-top:18px;
-  transition:.2s;
-}
-
-.reject-btn:hover{
-  transform:scale(1.02);
-}
-
-.guarantee{
-  font-size:18px;
-  font-weight:700;
-  margin-top:28px;
-}
-
-.small{
-  font-size:12px;
-  color:#777;
-  margin-top:16px;
-  line-height:1.6;
-}
-
-footer{
-  margin-top:30px;
-  font-size:13px;
-  color:#777;
-}
-
-footer a{
-  color:#777;
-  text-decoration:none;
-}
 </style>
+
 </head>
 
 <body>
 
+<div class="warning-banner">
+⚠️ WARNING: Do not close or refresh this page, as it may cause errors with your purchase.
+</div>
+
+<div class="secure-badge">
+<img src="https://upgradeyourorder.com/wp-content/uploads/2025/10/secure-3.png" alt="Secure Payment">
+</div>
+
+<div class="nav-tabs">
+    <div class="nav-tab completed">✓ PURCHASE INFO</div>
+    <div class="nav-tab active">NEW OPPORTUNITY!</div>
+    <div class="nav-tab pending">ORDER CONFIRMATION</div>
+</div>
+
 <div class="container">
-<div class="card">
 
-<div class="alert">
-⚠️ WAIT! YOUR ORDER IS NOT COMPLETE
-</div>
+<div class="content-box">
 
-<div class="tag">
-Exclusive Optional Upgrade
-</div>
+<h1>Your Order Is Not Complete Yet</h1>
 
-<h1>
-<span class="highlight">Sacred Touch</span> Massage Guide
-</h1>
+<p class="subtitle">
+Please Read This Important Message Below
+</p>
 
-<div class="price">
-Only $69
-</div>
+<div class="arrow-down">↓</div>
+
+<div class="tsl-wrapper">
 
 <p>
-This optional digital guide includes educational massage techniques designed to help couples improve relaxation, connection, and overall wellness through mindful touch practices.
+<strong>Do not leave this page</strong>, it’s through this page that I’m going to show you how to access your app.
 </p>
 
 <p>
-The content was created for adults interested in learning calming massage routines, body relaxation methods, and wellness-focused touch techniques in a respectful and professional format.
+Now imagine this: you already know exactly what to do with your hands. Your body is ready, full of energy.
 </p>
 
-<ul>
-<li>✔️ Beginner-friendly massage routines</li>
-<li>✔️ Relaxation and stress relief techniques</li>
-<li>✔️ Wellness-focused body touch methods</li>
-<li>✔️ Simple step-by-step educational guidance</li>
-<li>✔️ Couples connection and relaxation ideas</li>
-</ul>
+<p>
+But she gets home tense. Her mind is in a thousand places. The day was exhausting. Her body is closed off.
+</p>
 
-<a href="https://www.checkout-ds24.com/answer/yes?template=light" class="btn accept">
-BUY NOW — ADD SACRED TOUCH TO MY ORDER
+<p>
+Then you touch her the right way — not with rush, not with pressure — and in less than 20 minutes she disconnects from the entire world.
+</p>
+
+<p>
+Her body truly relaxes. Her mind stops racing. And when she walks into the bedroom with you, she’s not just present. She’s available. Completely.
+</p>
+
+<p>
+<span class="highlight">
+That’s when something happens that most men will never experience in their entire lives:
+</span>
+<strong>multiple orgasms back to back, nonstop, one after another.</strong>
+</p>
+
+<p>
+This isn’t luck. It’s protocol.
+</p>
+
+<p>
+<strong>Here’s a truth nobody talks about.</strong>
+</p>
+
+<p>
+You can master every technique in the world. You can have your body fully prepared. But if she isn’t genuinely relaxed… her body will resist.
+</p>
+
+<p>
+And it’s not a lack of desire. It’s biology.
+</p>
+
+<p>
+When a woman is stressed, her nervous system goes into defense mode. Her muscles tighten. Blood flow decreases. Sensitivity drops.
+</p>
+
+<p>
+It’s like trying to light a campfire with wet wood. No matter how hard you try — it simply won’t ignite.
+</p>
+
+<p>
+Most men force the situation. They jump straight into action. And she may even participate… but she never fully lets go.
+</p>
+
+<p>
+You can feel it. That sensation that she’s there, but not truly present.
+</p>
+
+<p>
+<strong>What I’m about to show you is not a spa massage.</strong>
+</p>
+
+<p>
+It’s a 20-minute protocol — an exact sequence of touches, pressure points, and body areas — specifically designed to deactivate the female defensive nervous system.
+</p>
+
+<p>
+When you follow this sequence, her cortisol levels drop. Oxytocin rises. Her entire body enters a state of receptivity.
+</p>
+
+<p>
+There’s a map of tension points in the female body that, when worked in the right order, don’t just relax her — they amplify her orgasmic response.
+</p>
+
+<p>
+These points are located in the neck, back, lower spine, and inner thighs. Most men go their entire lives without even knowing they exist.
+</p>
+
+<p>
+When you release these points before anything else… what happens afterward is on another level.
+</p>
+
+<p>
+<strong>She experiences multiple orgasms in a row. Each one stronger than the last.</strong>
+</p>
+
+<p>
+<strong>Sacred Touch</strong> is a complete guide in the form of explicit, uncensored video lessons unlike anything you’ve ever seen before.
+</p>
+
+<p>
+Inside, you’ll get the full 20-minute protocol, the map of female tension points, pressure techniques for each area, and how to combine all of it before applying what you learned in God Mode.
+</p>
+
+<p>
+<span class="highlight">
+For just a symbolic one-time payment of $69
+</span>
+you’ll get access to all of this and many more surprises, so click the green button below and confirm your access.
+</p>
+
+<!-- BOTÕES LOGO ABAIXO DA FRASE -->
+
+<div class="decision-container">
+
+<a href="https://www.checkout-ds24.com/answer/yes?template=light" class="btn-yes">
+ACCESS WITH DISCOUNT
 </a>
 
-<div class="button-price">
-One-Time Charge: $69
-</div>
-
-<a href="https://www.checkout-ds24.com/answer/no" class="reject-btn">
-NO THANKS — I DON'T WANT THIS OPTIONAL GUIDE
+<a href="https://www.checkout-ds24.com/answer/no" class="btn-no">
+decline offer, thank you
 </a>
 
-<div class="guarantee">
-60-Day Money-Back Guarantee
 </div>
 
 <p>
-You may try the digital guide for 60 days. If you are not satisfied, you can request a refund according to the platform’s refund policy.
+Now it’s time to make sure she’ll be 100% open to receive all of this.
 </p>
 
-<p class="small">
-This product is for educational and wellness purposes only. It does not provide medical, therapeutic, or psychological advice. Individual experiences may vary.
+<p>
+<strong>
+Click the button below right now and add Sacred Touch to your order.
+</strong>
 </p>
-
-<p class="small">
-This is a digital product. No physical item will be shipped. Access is provided online after purchase.
-</p>
-
-<script src=" https://www.digistore24-scripts.com/service/digistore.js "></script>
-<script>digistoreUpsell()</script>
-  
-<footer>
-<a href="https://sacredchantguide.site/privacy-policy/">Privacy Policy</a> |
-<a href="https://sacredchantguide.site/terms/">Terms of Use</a> |
-<a href="https://sacredchantguide.site/contact/">Contact</a>
-</footer>
 
 </div>
+
+<div class="sound-notice">
+🛡️ Secure Access & Lifetime Guarantee
+</div>
+
+</div>
+
 </div>
 
 </body>
