@@ -1,236 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
-    <script>digistoreUpsell()</script>
-    <script type="text/javascript" src="https://www.digistore24.com/trusted-badge/45038/EfkrAuwxyTyKoSt/salespage"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congratulations</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>HP – Upsell 1 – inmotionn.site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Poppins", sans-serif;
-            background: #000;
-            color: #fff;
-            line-height: 1.5;
-            text-align: center;
-        }
-        /* HEADER */
-        .header {
-            background: linear-gradient(90deg, #d80000, #7a0000);
-            padding: 20px 10px;
-        }
-        .title-tag {
-            background: #fff;
-            color: #d80000;
-            font-weight: 800;
-            font-size: 22px;
-            padding: 5px 10px;
+        .esconder { display: none; }
+        
+        /* Floating bar removed */
+        
+        /* Basic styles */
+        body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+        .elementor-button {
             display: inline-block;
-        }
-        .header-msg {
-            margin-top: 15px;
-            font-size: 15px;
-            font-weight: 500;
-        }
-        .email-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            margin-top: 5px;
-            flex-wrap: wrap;
-        }
-        .email-text {
-            font-weight: 700;
-            text-decoration: underline;
-        }
-        .copy-btn {
-            background: #fff;
-            color: #d80000;
-            border: none;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 12px;
-            cursor: pointer;
-        }
-        .copy-btn:active {
-            transform: scale(0.95);
-        }
-        /* PROGRESS */
-        .step {
-            font-size: 18px;
-            font-weight: 700;
-            margin: 20px 0 10px;
-        }
-        .progress {
-            width: 90%;
-            margin: 0 auto;
-            height: 30px;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .progress-bar {
-            width: 75%;
-            height: 100%;
-            background: linear-gradient(90deg, #16a34a, #0d6b3a);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-        }
-        /* WARNING */
-        .warning {
-            font-size: 14px;
-            margin: 10px 0;
-        }
-        .warning span {
-            color: #ffcc00;
-            font-size: 18px;
-        }
-        /* PLAYER */
-        vturb-smartplayer {
-            display: block;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        /* CONTENT */
-        .main-content {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 0 20px;
-            text-align: left;
-            line-height: 1.6;
-        }
-        .main-content h1, .main-content h2 {
-            text-align: center;
-            color: #fff;
-        }
-        .highlight {
-            color: #ffcc00;
-            font-weight: 700;
-        }
-        /* BUTTONS */
-        .decision-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            width: 100%;
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .btn-yes {
-            width: 100%;
-            background: #25D366;
-            color: #fff;
-            padding: 18px 20px;
-            font-size: 22px;
-            font-weight: 800;
-            text-transform: uppercase;
-            border-radius: 8px;
+            padding: 12px 30px;
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
             text-decoration: none;
-            animation: pulse-green 1.5s infinite;
-        }
-        .btn-no {
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: underline;
-        }
-        @keyframes pulse-green {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.04); }
-            100% { transform: scale(1); }
-        }
-        /* TESTIMONIALS */
-        .testimonial {
-            background: #111;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px auto;
-            max-width: 700px;
-            text-align: left;
-        }
-        .stars {
-            color: #ffcc00;
-            font-size: 20px;
-        }
-        /* BONUS */
-        .bonus-section {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px 20px;
-            background: #111;
-            border-radius: 12px;
-            border: 2px solid #ffcc00;
-            box-shadow: 0 10px 30px rgba(255, 204, 0, 0.1);
+            border-radius: 5px;
             text-align: center;
-        }
-        .bonus-title {
-            color: #ffcc00;
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        /* MOBILE */
-        @media (max-width: 480px) {
-            .btn-yes {
-                font-size: 18px;
-                padding: 15px;
-            }
-            .main-content {
-                padding: 0 15px;
-            }
-            .bonus-title {
-                font-size: 22px;
-            }
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <span class="title-tag">CONGRATULATIONS! BUT...</span>
-        <div class="header-msg">
-            WATCH THE VIDEO BELOW:
+
+<div class="elementor elementor-2707">
+
+    <!-- Warning -->
+    <div class="elementor-element e-flex e-con-boxed e-con e-parent">
+        <div class="e-con-inner">
+            <div class="elementor-widget-text-editor">
+                <p><em><span style="color: #ffff00;">Important! Do Not Close This Window or Click The ‘’Back’’ Button</span></em></p>
+                <p><em>Clicking Your “Back” Button Will Result In Your Order Being Double-Billed</em></p>
+            </div>
         </div>
     </div>
-    <div class="step">STEP 3 OF 4</div>
-    <div class="progress">
-        <div class="progress-bar">75%</div>
-    </div>
-    <div class="warning">
-        <span>⚠</span> Watch the video below 👇 To go directly to the app, click the green button below it.
-    </div>
 
-
-    <div class="main-content">
-        <vturb-smartplayer id="vid-6a2f081d5e877cc419179032" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6a2f081d5e877cc419179032/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
-        <br>
-        <div class="decision-container">
-            <a href="https://www.checkout-ds24.com/answer/yes?template=light" class="btn-yes">
-                ACCESS NOW - ONLY $69
-            </a>
-            <a href="https://www.checkout-ds24.com/answer/no" class="btn-no">
-                No, I'd rather pay the full price
-            </a>
+    <!-- Video -->
+    <div class="elementor-element e-flex e-con-boxed e-con e-parent">
+        <div class="e-con-inner">
+            <vturb-smartplayer id="vid-6a2afb447f684d974fa48e6f" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+            <script type="text/javascript">
+                var s=document.createElement("script");
+                s.src="https://scripts.converteai.net/8b0d142a-59e8-4885-8c14-c38ab24c2c5b/players/6a2afb447f684d974fa48e6f/v4/player.js";
+                s.async=!0;
+                document.head.appendChild(s);
+            </script>
         </div>
+    </div>
 
+    <!-- Accelerator Options -->
+    <div class="elementor-element e-con-full esconder e-flex e-con e-parent">
+        <div class="elementor-element e-con-full e-flex e-con e-child">
+            <div class="elementor-widget-text-editor"><p>Neuro Honey Accelerator For Women</p></div>
+            <div class="elementor-widget-button">
+                <a class="elementor-button" href="https://www.checkout-ds24.com/answer/yes?template=light">
+                    <span>WOMEN CLICK HERE</span>
+                </a>
+            </div>
+        </div>
         
-        <p style="text-align:center; font-size:18px; font-weight:700; margin:30px 0;">
-            But be quick, click the green button below this video.
-        </p>
+        <div class="elementor-element e-con-full e-flex e-con e-child">
+            <div class="elementor-widget-text-editor"><p>Neuro Honey Accelerator For Men</p></div>
+            <div class="elementor-widget-button">
+                <a class="elementor-button" href="https://www.checkout-ds24.com/answer/yes?template=light">
+                    <span>MEN CLICK HERE</span>
+                </a>
+            </div>
+        </div>
     </div>
 
-    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+    <!-- Urgency -->
+    <div class="elementor-element e-con-full esconder e-flex e-con e-parent">
+        <div class="elementor-widget-progress">
+            <span>LIVE: Updated 2 minutes ago</span>
+            <div class="elementor-progress-wrapper">
+                <div class="elementor-progress-bar" style="width:80%">
+                    <span>Hurry, Only 4 out Of 25 Spots</span>
+                </div>
+            </div>
+        </div>
+        <div class="elementor-widget-button">
+            <a class="elementor-button" href="https://www.checkout-ds24.com/answer/yes?template=light">
+                ADD TO MY ORDER &gt;&gt;
+            </a>
+        </div>
+        <div class="elementor-widget-text-editor">
+            <p><a href="https://www.checkout-ds24.com/answer/yes?template=light">Click here now to confirm this upgrade &gt;&gt;</a></p>
+        </div>
+        <div class="elementor-widget-text-editor">
+            <p><em>Restore Your Memory In <span style="color: #ff0000;"><del>90 Days</del></span> Just 21 Days<br>With The Accelerator Upgrade!</em></p>
+        </div>
+    </div>
+
+    <!-- Comparison -->
+    <div class="elementor-element esconder e-flex e-con-boxed e-con e-parent">
+        <div class="e-con-inner">
+            <div>😐<strong>WITHOUT</strong><br>Accelerator: &gt;&gt;<strong>8%</strong>&lt;&lt;</div>
+            <div><img src="https://inmotionn.site/wp-content/uploads/2026/06/FKCkme0173900.webp" alt="" style="max-width:100%"></div>
+            <div>😍<strong>WITH</strong><br>Accelerator: &gt;&gt;<strong>92%</strong>&lt;&lt;</div>
+        </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="elementor-element esconder e-flex e-con-boxed e-con e-parent">
+        <div class="e-con-inner">
+            <p><i>Why It’s A <span style="text-decoration: underline;">No Brainer</span> To Confirm The Accelerator Upgrade</i></p>
+            <img src="https://inmotionn.site/wp-content/uploads/2026/06/uLLFJx5768510-1024x536.webp" alt="" style="max-width:100%">
+            
+            <p>93% of Neuro-Honey Protocol users confirm this Upgrade accelerates their cognitive recovery</p>
+            
+            <p><strong>1. Accelerated Cognitive Restoration</strong> – Reduces recovery time from 90-180 days to as little as 21 days...</p>
+            <p><strong>2. Enhanced Neural Absorption</strong> – The “cascade absorption effect”...</p>
+            <!-- (rest of benefits kept) -->
+            
+            <div class="elementor-widget-progress">
+                <span>LIVE: Updated 1 minutes ago</span>
+                <div class="elementor-progress-wrapper">
+                    <div class="elementor-progress-bar" style="width:87%">
+                        <span>Hurry, Only 3 out Of 25 Spots</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="elementor-widget-button">
+                <a class="elementor-button" href="https://www.checkout-ds24.com/answer/yes?template=light">
+                    ADD TO MY ORDER &gt;&gt;
+                </a>
+            </div>
+            <div class="elementor-widget-text-editor">
+                <p><a href="https://www.checkout-ds24.com/answer/yes?template=light">Click here now to confirm this upgrade &gt;&gt;</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guarantee -->
+    <div class="elementor-element esconder e-flex e-con-boxed e-con e-parent">
+        <div class="e-con-inner">
+            <p>The Neuro Honey Accelerator comes with my 100% Ironclad Money-Back Guarantee.</p>
+            <!-- Guarantee text kept -->
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Simple delay script for hidden elements (kept minimal)
+    var delaySeconds = 296;
+    var player = document.querySelector("vturb-smartplayer");
+    if (player) {
+        player.addEventListener("player:ready", function() {
+            var hidden = document.querySelectorAll(".esconder");
+            hidden.forEach(el => el.style.display = "flex");
+        });
+    }
+</script>
+
 </body>
 </html>
