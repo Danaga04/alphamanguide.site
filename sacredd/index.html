@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Sacred Prayer – Exclusive Video</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    /* Header simples, mobile-first */
+    .simple-header {
+      width: 100%;
+      background: #ffffff;
+      padding: 12px 14px;
+      text-align: center;
+      border-bottom: 1px solid #e4e6eb;
+      font-weight: 600;
+      color: #1c1e21;
+      font-size: 0.95rem;
+      letter-spacing: 0.2px;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      max-width: 600px;
+      padding: 0 8px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #ffffff;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      margin: 12px 0 4px;
+      background: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #e4e6eb;
+    }
+
+    vturb-smartplayer {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      background: #ffffff;
+    }
+
+    /* Comentários estilo Facebook (mobile-first) */
+    .fb-comments-section {
+      background-color: #ffffff;
+      width: 100%;
+      margin: 16px 0 24px;
+      padding: 0 4px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .fb-header-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ced0d4;
+      padding-bottom: 10px;
+    }
+
+    .fb-count-text {
+      color: #65676b;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .fb-comment-container {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .fb-reply-thread {
+      margin-left: 40px;
+      border-left: 2px solid #f0f2f5;
+      padding-left: 6px;
+    }
+
+    .fb-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-right: 8px;
+      flex-shrink: 0;
+      background: #e4e6eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #1c1e21;
+      font-size: 0.9rem;
+    }
+
+    .fb-reply-thread .fb-avatar {
+      width: 28px;
+      height: 28px;
+      font-size: 0.75rem;
+    }
+
+    .fb-comment-bubble-wrapper {
+      max-width: 85%;
+      position: relative;
+      flex: 1;
+    }
+
+    .fb-comment-bubble {
+      background-color: #f0f2f5;
+      border-radius: 18px;
+      padding: 8px 12px;
+      color: #050505;
+      font-size: 14px;
+      line-height: 1.35;
+      position: relative;
+      word-wrap: break-word;
+    }
+
+    .fb-author {
+      font-weight: 700;
+      font-size: 13px;
+      color: #050505;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 2px;
+    }
+
+    .verified-badge {
+      width: 13px;
+      height: 13px;
+      background: #1877f2;
+      border-radius: 50%;
+      color: white;
+      font-size: 9px;
+      text-align: center;
+      line-height: 13px;
+      display: inline-block;
+    }
+
+    .fb-comment-actions {
+      display: flex;
+      gap: 10px;
+      margin-left: 10px;
+      margin-top: 3px;
+      font-size: 11px;
+      color: #65676b;
+      font-weight: 600;
+    }
+
+    .fb-action-link {
+      cursor: pointer;
+      text-decoration: none;
+      color: #65676b;
+    }
+
+    .fb-action-link:active {
+      text-decoration: underline;
+    }
+
+    .fb-reaction-badge {
+      position: absolute;
+      bottom: -7px;
+      right: -3px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      padding: 2px 5px;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      font-size: 12px;
+      cursor: default;
+    }
+
+    .fb-reaction-count {
+      font-size: 11px;
+      color: #65676b;
+      margin-left: 3px;
+    }
+
+    .footer-new {
+      background: #ffffff;
+      color: #65676b;
+      width: 100%;
+      text-align: center;
+      font-size: 0.7rem;
+      padding: 18px 10px 24px;
+      line-height: 1.5;
+      border-top: 1px solid #dddfe2;
+    }
+
+    @media (max-width: 380px) {
+      .fb-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+      }
+      .fb-reply-thread {
+        margin-left: 28px;
+      }
+      .fb-comment-bubble {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="simple-header">
+    ⚡ Exclusive video – Watch now
+  </div>
+
+  <div class="page-wrapper">
+    <!-- Player de vídeo limpo -->
+    <div class="video-wrapper">
+      <vturb-smartplayer id="ab-6a37fbd11299d5533b3a2ace" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
+      <script>
+        var s = document.createElement("script");
+        s.src = "https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/ab-test/6a37fbd11299d5533b3a2ace/player.js";
+        s.async = !0;
+        document.head.appendChild(s);
+      </script>
+    </div>
+
+    <!-- Comentários estilo Facebook (em inglês) -->
+    <div class="fb-comments-section">
+      <div class="fb-header-info">
+        <span class="fb-count-text">Most relevant • 28 of 412</span>
+      </div>
+
+      <!-- Comment 1 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">A</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Amanda Lee <span class="verified-badge">✔</span></span>
+            This is the video that explains the hidden prayer from the original manuscripts. I started yesterday and already feel a shift.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>👍 ❤️</span>
+            <span class="fb-reaction-count">24</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>2h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reply -->
+      <div class="fb-comment-container fb-reply-thread">
+        <div class="fb-avatar">R</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Robert King</span>
+            Same here! I felt a peace I haven't felt in years.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>👍</span>
+            <span class="fb-reaction-count">8</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>1h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment 2 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">M</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Michael Torres</span>
+            Did the Pope really reveal this? Unbelievable that they hid this prayer for so long.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>😮</span>
+            <span class="fb-reaction-count">19</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>2h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reply -->
+      <div class="fb-comment-container fb-reply-thread">
+        <div class="fb-avatar">J</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Julia Carter <span class="verified-badge">✔</span></span>
+            Yes! He shows the original scrolls. It's mind-blowing.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>❤️</span>
+            <span class="fb-reaction-count">12</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>1h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment 3 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">L</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Linda Moore</span>
+            My husband was unemployed for 7 months. We prayed together for 5 days and he received an amazing offer!
+          </div>
+          <div class="fb-reaction-badge">
+            <span>🙏 ❤️</span>
+            <span class="fb-reaction-count">41</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>3h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment 4 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">C</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Chris Evans <span class="verified-badge">✔</span></span>
+            I was very skeptical, but after the explanation about the removed verse, everything made sense.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>👍</span>
+            <span class="fb-reaction-count">17</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>4h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment 5 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">S</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Sarah Bennett</span>
+            My friend sent me this video and I cried from start to finish. I finally understand why my prayers weren't working.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>😭 ❤️</span>
+            <span class="fb-reaction-count">33</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>4h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reply -->
+      <div class="fb-comment-container fb-reply-thread">
+        <div class="fb-avatar">P</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Peter Johnson</span>
+            It truly changed my life! Watch until the end.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>👍</span>
+            <span class="fb-reaction-count">6</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>2h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment 6 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">T</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Tina Rodriguez</span>
+            The part about billionaires hiding this power is scary. Thank God this prayer came to light.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>😮👏</span>
+            <span class="fb-reaction-count">22</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>5h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment 7 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">B</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Brenda White</span>
+            My $30k debt was paid off after 12 days of reciting. Speechless.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>✨</span>
+            <span class="fb-reaction-count">29</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>5h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment 8 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">G</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">George Miller</span>
+            Did anyone else feel a strange energy while reciting? It's like the atmosphere changes.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>🙌</span>
+            <span class="fb-reaction-count">14</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>6h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment 9 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">F</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Felicia Adams</span>
+            This should be in churches! Why did they hide it? Outrageous.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>💪</span>
+            <span class="fb-reaction-count">11</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>7h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment 10 -->
+      <div class="fb-comment-container">
+        <div class="fb-avatar">E</div>
+        <div class="fb-comment-bubble-wrapper">
+          <div class="fb-comment-bubble">
+            <span class="fb-author">Edward Scott</span>
+            I was sick and doctors couldn't find anything. After this prayer, I got a clear diagnosis and the right treatment.
+          </div>
+          <div class="fb-reaction-badge">
+            <span>❤️🙏</span>
+            <span class="fb-reaction-count">38</span>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-link">Like</span>
+            <span class="fb-action-link">Reply</span>
+            <span>8h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-new">
+    <p>This site is not part of Facebook or Meta Platforms, Inc. All testimonials are individual experiences.</p>
+    <p>© 2025 Guardian Angel – All rights reserved.</p>
+  </footer>
+</body>
+</html>
