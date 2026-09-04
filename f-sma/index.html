@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylo Maison App - La Révolution Minceur</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        /* Faixa Superior Principal */
+        .main-header {
+            background-color: #bd1414;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px;
+            height: 56px;
+            box-sizing: border-box;
+        }
+
+        .header-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: inherit;
+        }
+
+        .header-btn svg {
+            width: 22px;
+            height: 22px;
+            margin-bottom: 2px;
+            fill: currentColor;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .logo-box img {
+            max-height: 44px;
+            display: block;
+        }
+
+        /* Segunda Faixa (Sub-header) */
+        .sub-header {
+            background-color: #bd1414;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 12px;
+            border-bottom: 4px solid #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        .radio-vaticana-tag {
+            background-color: white;
+            color: #bd1414;
+            font-weight: bold;
+            font-size: 11px;
+            padding: 5px 8px;
+            border-radius: 2px;
+            border: 1px solid #9c0e0e;
+            text-decoration: none;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-title {
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-grow: 1;
+            margin-left: 12px;
+        }
+
+        .news-title svg {
+            width: 14px;
+            height: 14px;
+            fill: white;
+        }
+
+        .right-icons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .right-icons svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+
+        /* Container da sua VSL */
+        .vsl-section {
+            margin: 25px auto;
+            padding: 0 15px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        /* ===== HEADLINE STYLE - modèle de la référence ===== */
+        .vsl-section {
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .headline-block {
+            text-align: center;
+            margin: 0 0 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .headline-block .selection-text {
+            background: #e62205;
+            color: #fff;
+            padding: 24px 22px 25px;
+            font-size: 20px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .headline-block .main-headline {
+            background: #fff;
+            color: #111;
+            padding: 14px 14px 8px;
+            font-size: 27px;
+            line-height: 1.08;
+            font-weight: 700;
+        }
+
+        .headline-block .main-headline .red {
+            color: #e62205;
+        }
+
+        .headline-block .disclaimer {
+            background: #fff;
+            color: #333;
+            padding: 10px 14px 14px;
+            font-size: 18px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .headline-block .disclaimer strong {
+            color: #e62205;
+            font-weight: 400;
+        }
+
+        /* ===== OFFER SECTION STYLES ===== */
+
+        .offer-section {
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .offer-section .special-text {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #111;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .offer-section .special-text strong {
+            color: #e5392d;
+        }
+
+        .offer-section .countdown-bar {
+            background: #e5392d;
+            color: #fff;
+            padding: 20px 10px;
+        }
+
+        .offer-section .countdown-bar h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .offer-section .countdown-box {
+            background: #000;
+            display: inline-flex;
+            padding: 20px 30px;
+            border-radius: 5px;
+            gap: 40px;
+        }
+
+        .offer-section .time {
+            text-align: center;
+        }
+
+        .offer-section .time span {
+            display: block;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .offer-section .label {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .offer-section .container {
+            padding: 20px 10px;
+        }
+
+        .offer-section .price-old {
+            font-size: 28px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .offer-section .price-old span {
+            color: red;
+            text-decoration: line-through;
+        }
+
+        .offer-section .price-new {
+            font-size: 26px;
+            margin-top: 5px;
+        }
+
+        .offer-section .price-new span {
+            color: #2fae8f;
+            font-weight: bold;
+        }
+
+        .offer-section .payments {
+            margin-top: 15px;
+        }
+
+        .offer-section .payments img {
+            height: 28px;
+        }
+
+        .offer-section .secure {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* Estilos da Seção de Comentários */
+        .fb-comments-section {
+            background-color: #fff;
+            max-width: 100%;
+            width: 800px;
+            margin: 30px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+        }
+
+        .fb-header-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ced0d4;
+            padding-bottom: 10px;
+        }
+
+        .fb-count-text {
+            color: #65676b;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .fb-comment-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .fb-reply-thread {
+            margin-left: 50px;
+            border-left: 2px solid #f0f2f5;
+            padding-left: 5px;
+        }
+
+        .fb-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .fb-reply-thread .fb-avatar {
+            width: 32px;
+            height: 32px;
+        }
+
+        .fb-comment-bubble-wrapper {
+            max-width: 90%;
+            position: relative;
+        }
+
+        .fb-comment-bubble {
+            background-color: #f0f2f5;
+            border-radius: 18px;
+            padding: 10px 14px;
+            color: #050505;
+            font-size: 15px;
+            line-height: 1.4;
+            position: relative;
+        }
+
+        .fb-author {
+            font-weight: 700;
+            font-size: 13px;
+            color: #050505;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: 2px;
+            cursor: default;
+            text-decoration: none;
+        }
+
+        .verified-badge {
+            width: 14px;
+            height: 14px;
+            fill: #1877f2;
+        }
+
+        .fb-comment-actions {
+            display: flex;
+            gap: 12px;
+            margin-left: 14px;
+            margin-top: 4px;
+            font-size: 12px;
+            color: #65676b;
+            font-weight: 700;
+        }
+
+        .fb-action-link {
+            cursor: pointer;
+            text-decoration: none;
+            color: #65676b;
+        }
+        .fb-action-link:hover {
+            text-decoration: underline;
+        }
+
+        .fb-reaction-badge {
+            position: absolute;
+            bottom: -8px;
+            right: -5px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            padding: 2px 6px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            z-index: 2;
+            font-size: 14px;
+        }
+
+        .fb-reaction-count {
+            font-size: 12px;
+            color: #65676b;
+            margin-left: 4px;
+            font-weight: 400;
+        }
+
+        .fb-load-more {
+            font-weight: 700;
+            color: #65676b;
+            cursor: pointer;
+            padding: 15px 0;
+            display: block;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .footer {
+            background-color: #f5f5f5;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-size: 13px;
+            color: #777;
+            padding: 25px 10px;
+            line-height: 1.6;
+        }
+        @media (max-width: 600px) {
+            .headline-block .selection-text {
+                padding: 20px 14px 21px;
+                font-size: 19px;
+                line-height: 1.65;
+            }
+
+            .headline-block .main-headline {
+                padding: 14px 10px 8px;
+                font-size: 25px;
+                line-height: 1.08;
+            }
+
+            .headline-block .disclaimer {
+                padding: 8px 10px 12px;
+                font-size: 17px;
+                line-height: 1.7;
+            }
+        }
+            .fb-reply-thread {
+                margin-left: 30px;
+            }
+            .headline-block h2 {
+                font-size: 20px;
+            }
+            .headline-block .sub-headline {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== VSL SECTION avec HEADLINE ===== -->
+    <div class="vsl-section">
+
+        <!-- HEADLINE estilo da imagem de referência -->
+        <div class="headline-block">
+            <div class="selection-text">
+                Vous et quelques personnes de <span id="city-name">Paris</span> avez été<br>
+                sélectionnés pour voir cette présentation.
+            </div>
+
+            <div class="main-headline">
+                Le vinaigre de cidre au citron <span class="red">a un<br>
+                effet bariatrique</span>, mais seulement<br>
+                s'il est <span class="red">préparé de la manière<br>
+                suivante</span>
+            </div>
+
+            <div class="disclaimer">
+                Regardez cette présentation jusqu'à la fin. Elle sera<br>
+                retirée le <strong>04/09/2026</strong>
+            </div>
+        </div>
+
+        <!-- NOUVEAU PLAYER VSL -->
+        <vturb-smartplayer id="vid-6a9b14bbd50c330afd8dd208" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
+            <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div>
+        </vturb-smartplayer>
+        <script type="text/javascript">
+            var s = document.createElement("script");
+            s.src = "https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6a9b14bbd50c330afd8dd208/v4/player.js";
+            s.async = !0;
+            document.head.appendChild(s);
+        </script>
+
+        <!-- Scripts de préchargement (conservés) -->
+        <script>
+            !function(i, n) {
+                i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now())
+            }(window, performance);
+        </script>
+        <link rel="preload" href="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6a9b14bbd50c330afd8dd208/v4/player.js" as="script">
+        <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+        <link rel="dns-prefetch" href="https://cdn.converteai.net">
+        <link rel="dns-prefetch" href="https://scripts.converteai.net">
+        <link rel="dns-prefetch" href="https://images.converteai.net">
+        <link rel="dns-prefetch" href="https://m3u8.vturb.net">
+        <link rel="dns-prefetch" href="https://license.vturb.com">
+
+    </div>
+
+    <!-- ===== NOMBRE DE PERSONNES EN LIGNE ===== -->
+    <div style="display:flex;justify-content:center;align-items:center;width:100%;margin-top:20px;margin-bottom:20px;">
+        <p style="font-family:'Poppins',sans-serif;font-size:18px;color:#000;text-align:center;">
+            <span id="number"></span> personnes regardent en ce moment
+        </p>
+    </div>
+
+    <script>
+        let number;
+
+        function add() {
+            number += Math.floor((Math.random() * 6) + 1);
+            document.getElementById("number").innerHTML = number;
+            setTimeout(add, 10000);
+        }
+
+        function generate() {
+            number = Math.floor(Math.random() * 1143) + 1578;
+            document.getElementById("number").innerHTML = number;
+            add();
+        }
+        generate();
+    </script>
+
+    <!-- ===== OFFER SECTION ===== -->
+    <div class="offer-section">
+        <div id="esconder">
+            <div class="container">
+
+                <div class="price-old">
+                    Normalement : <span>7 500 €</span>
+                </div>
+
+                <div class="price-new">
+                    Aujourd'hui seulement : <span>29 €</span>
+                </div>
+
+                <div class="special-text">
+                    <strong>Félicitations, vous êtes notre 4 000ᵉ client — vous avez débloqué un prix spécial : 29 €.</strong><br>
+                    Cette offre n'est pas accessible au public et n'est valable que 10 minutes.<br>
+                    Cliquez sur le bouton avant qu'elle ne disparaisse.
+                </div>
+
+                <br>
+
+                <div class="payments">
+                    <img src="https://i.postimg.cc/44z0dTZR/gdegbo6498420.png" alt="Moyens de paiement">
+                </div>
+
+                <div class="secure">
+                    🔒 Vos informations sont sécurisées. La transaction s'effectue sur un serveur sécurisé avec la technologie SSL.
+                </div>
+
+            </div>
+
+            <div class="countdown-bar">
+                <h1><strong>Obtenez Stylo Maison App</strong> avant la fin de l'offre</h1>
+
+                <div class="countdown-box">
+                    <div class="time">
+                        <span id="minutes">59</span>
+                        <div class="label">Minutes</div>
+                    </div>
+                    <div class="time">
+                        <span id="seconds">59</span>
+                        <div class="label">Secondes</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SCRIPT COUNTDOWN -->
+        <script>
+            let totalSeconds = (59 * 60) + 59;
+
+            function updateCountdown() {
+                let minutes = Math.floor(totalSeconds / 60);
+                let seconds = totalSeconds % 60;
+
+                document.getElementById("minutes").textContent = minutes;
+                document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
+
+                if (totalSeconds > 0) {
+                    totalSeconds--;
+                }
+            }
+
+            setInterval(updateCountdown, 1000);
+        </script>
+    </div>
+    <!-- ===== END OFFER SECTION ===== -->
+
+    <!-- ===== SECTION COMMENTAIRES ===== -->
+    <div class="fb-comments-section">
+        <div class="fb-header-info">
+            <span class="fb-count-text">Affichage de 26 commentaires sur 322</span>
+        </div>
+
+        <!-- Commentaires (inchangés) -->
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=1" class="fb-avatar" alt="Sophie Martin">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Sophie Martin</span>
+                    J'ai commencé Stylo Maison App il y a 3 semaines et j'ai déjà perdu 6 kg ! Je n'arrive pas à y croire. La méthode est tellement simple à suivre.
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>👍</span>
+                    <span class="fb-reaction-count">18</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>3 h</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container fb-reply-thread">
+            <img src="https://i.pravatar.cc/150?img=2" class="fb-avatar" alt="Camille Dubois">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Camille Dubois</span>
+                    C'est incroyable Sophie ! Moi aussi j'ai perdu 4 kg en 2 semaines. Cette appli change vraiment la vie 🙌
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>👍 ❤️</span>
+                    <span class="fb-reaction-count">12</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>1 h</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=5" class="fb-avatar" alt="Julie Lefèvre">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Julie Lefèvre</span>
+                    J'étais sceptique au début, mais après avoir vu les résultats de ma sœur, j'ai décidé d'essayer. En 10 jours, j'ai perdu 3 kg sans régime draconien ! Je recommande à 100%.
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>❤️</span>
+                    <span class="fb-reaction-count">24</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>2 h</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=9" class="fb-avatar" alt="Nicolas Moreau">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Nicolas Moreau</span>
+                    J'ai perdu 12 kg en un mois avec Stylo Maison App. Mon médecin est impressionné par mes résultats. Si vous hésitez encore, lancez-vous !
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>👍 ❤️</span>
+                    <span class="fb-reaction-count">31</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>1 h</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=13" class="fb-avatar" alt="Élodie Petit">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Élodie Petit</span>
+                    Je n'arrivais pas à perdre mes kilos après ma grossesse. J'ai essayé plein de régimes sans succès. Avec Stylo Maison App, j'ai retrouvé ma silhouette en 6 semaines. Merci 🙏
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>❤️</span>
+                    <span class="fb-reaction-count">27</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>45 m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=16" class="fb-avatar" alt="Thomas Leroy">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Thomas Leroy</span>
+                    Franchement, j'ai testé tellement d'applis minceur... Stylo Maison App est la seule qui m'a vraiment aidé. J'ai perdu 8 kg et je me sens mieux que jamais.
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>👍</span>
+                    <span class="fb-reaction-count">19</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>1 h</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=19" class="fb-avatar" alt="Marie-Claire Fontaine">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Marie-Claire Fontaine</span>
+                    Mon mari ne me reconnaît plus ! J'ai perdu 10 kg en 5 semaines. Cette méthode est tellement différente de tout ce que j'ai essayé. C'est un véritable miracle 🙏✨
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>❤️</span>
+                    <span class="fb-reaction-count">33</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>30 m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=22" class="fb-avatar" alt="Antoine Girard">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Antoine Girard</span>
+                    J'étais en surpoids depuis des années. J'ai tout essayé. Stylo Maison App m'a aidé à perdre 15 kg en 8 semaines. Ma vie a complètement changé.
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>👍 ❤️</span>
+                    <span class="fb-reaction-count">42</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>20 m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=24" class="fb-avatar" alt="Isabelle Renaud">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Isabelle Renaud</span>
+                    Les résultats sont bluffants ! J'ai perdu 7 kg en 3 semaines. Et le meilleur, c'est que je ne me suis jamais sentie affamée. Merci Stylo Maison App ❤️
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>❤️</span>
+                    <span class="fb-reaction-count">28</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>15 m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=27" class="fb-avatar" alt="François Bernard">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">François Bernard</span>
+                    Je ne croyais pas aux applis minceur, mais ma femme m'a convaincu d'essayer. Résultat : -9 kg en 5 semaines ! Mon énergie a quintuplé. Je recommande les yeux fermés.
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>👍</span>
+                    <span class="fb-reaction-count">21</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>10 m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=30" class="fb-avatar" alt="Claire Vasseur">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Claire Vasseur</span>
+                    J'ai perdu 11 kg en 7 semaines. Mon médecin a validé la méthode et je n'ai jamais eu autant de compliments sur ma silhouette. Stylo Maison App est magique ! 😍
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>❤️ 👍</span>
+                    <span class="fb-reaction-count">37</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>8 m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=3" class="fb-avatar" alt="Patrick Dumont">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Patrick Dumont</span>
+                    Ma femme et moi avons suivi le programme ensemble. Elle a perdu 8 kg, moi 12 kg. Notre couple n'a jamais été aussi soudé ! Merci pour cette méthode.
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>❤️</span>
+                    <span class="fb-reaction-count">29</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>5 m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-comment-container">
+            <img src="https://i.pravatar.cc/150?img=7" class="fb-avatar" alt="Céline Perrin">
+            <div class="fb-comment-bubble-wrapper">
+                <div class="fb-comment-bubble">
+                    <span class="fb-author">Céline Perrin</span>
+                    J'ai essayé tellement de choses pour perdre du poids sans jamais y arriver. Stylo Maison App a été ma bouffée d'air frais. J'ai perdu 6 kg en 18 jours ! Incroyable.
+                </div>
+                <div class="fb-reaction-badge">
+                    <span>👍</span>
+                    <span class="fb-reaction-count">16</span>
+                </div>
+                <div class="fb-comment-actions">
+                    <span class="fb-action-link">J'aime</span>
+                    <span class="fb-action-link">Répondre</span>
+                    <span>4 m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-load-more">
+            Voir plus de commentaires
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>
+            Ce site n'est pas affilié à Facebook ou Meta Platforms, Inc. De plus, ce site n'est pas approuvé par Facebook de quelque manière que ce soit.
+            Facebook est une marque déposée de Meta Platforms, Inc.
+        </p>
+        <p>© 2025 Stylo Maison App — Tous droits réservés.</p>
+    </footer>
+
+    <!-- ===== SCRIPT DE GÉOLOCALISATION POUR LA VILLE ===== -->
+    <script>
+        // Récupère la ville via l'API ipapi.co (gratuite)
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                const city = data.city || 'Paris'; // fallback
+                document.getElementById('city-name').textContent = city;
+            })
+            .catch(() => {
+                // En cas d'erreur, on garde "Paris"
+                document.getElementById('city-name').textContent = 'Paris';
+            });
+    </script>
+
+</body>
+</html>
