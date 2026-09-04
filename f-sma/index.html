@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylo Maison App - La Révolution Minceur</title>
+    <title>(1) vidéo</title>
     <style>
         * {
             box-sizing: border-box;
@@ -460,22 +460,10 @@
         <!-- HEADLINE estilo da imagem de referência -->
         <div class="headline-block">
             <div class="selection-text">
-                Vous et quelques personnes de <span id="city-name">Paris</span> avez été<br>
-                sélectionnés pour voir cette présentation.
+                Vous et quelques autres personnes avez été sélectionnés pour regarder cette présentation.
             </div>
 
-            <div class="main-headline">
-                Le vinaigre de cidre au citron <span class="red">a un<br>
-                effet bariatrique</span>, mais seulement<br>
-                s'il est <span class="red">préparé de la manière<br>
-                suivante</span>
-            </div>
-
-            <div class="disclaimer">
-                Regardez cette présentation jusqu'à la fin. Elle sera<br>
-                retirée le <strong>04/09/2026</strong>
-            </div>
-        </div>
+        
 
         <!-- NOUVEAU PLAYER VSL -->
         <vturb-smartplayer id="vid-6a9b14bbd50c330afd8dd208" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
@@ -542,9 +530,9 @@
                 </div>
 
                 <div class="special-text">
-                    <strong>Félicitations, vous êtes notre 4 000ᵉ client — vous avez débloqué un prix spécial : 29 €.</strong><br>
-                    Cette offre n'est pas accessible au public et n'est valable que 10 minutes.<br>
-                    Cliquez sur le bouton avant qu'elle ne disparaisse.
+                    <strong>Félicitations, vous êtes notre 4 000e client — vous avez gagné une cuillère doseuse numérique spéciale : 29 €.</strong><br>
+                    Ce cadeau n'est disponible que pendant les 12 prochaines minutes.<br>
+                    Cliquez sur le bouton vert ci-dessus avant qu'il ne disparaisse.
                 </div>
 
                 <br>
@@ -862,23 +850,10 @@
             Ce site n'est pas affilié à Facebook ou Meta Platforms, Inc. De plus, ce site n'est pas approuvé par Facebook de quelque manière que ce soit.
             Facebook est une marque déposée de Meta Platforms, Inc.
         </p>
-        <p>© 2025 Stylo Maison App — Tous droits réservés.</p>
+        <p>© 2026 Stylo Maison App — Tous droits réservés.</p>
     </footer>
 
-    <!-- ===== SCRIPT DE GÉOLOCALISATION POUR LA VILLE ===== -->
-    <script>
-        // Récupère la ville via l'API ipapi.co (gratuite)
-        fetch('https://ipapi.co/json/')
-            .then(response => response.json())
-            .then(data => {
-                const city = data.city || 'Paris'; // fallback
-                document.getElementById('city-name').textContent = city;
-            })
-            .catch(() => {
-                // En cas d'erreur, on garde "Paris"
-                document.getElementById('city-name').textContent = 'Paris';
-            });
-    </script>
+   
 
 </body>
 </html>
