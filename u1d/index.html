@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -132,7 +133,7 @@
             font-weight: 700;
             text-decoration: underline;
         }
-        /* ANIMATION */
+        /* ANIMAÇÃO */
         @keyframes pulse-green {
             0% { transform: scale(1); }
             50% { transform: scale(1.04); }
@@ -179,7 +180,7 @@
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
         }
 
-        /* IMAGE */
+        /* IMAGEM */
         .upsell-image {
             display: block;
             max-width: 100%;
@@ -221,30 +222,19 @@
     <div class="header">
         <span class="title-tag">FÉLICITATIONS ! MAIS...</span>
         <div class="header-msg">
-            REGARDEZ LA VIDÉO CI-DESSOUS POUR NE PAS LA MANQUER :
+            REGARDEZ LA VIDÉO CI-DESSOUS POUR NE PAS LA MANQUER:
         </div>
     </div>
-
     <div class="step">ÉTAPE 3 SUR 4</div>
-
     <div class="progress">
         <div class="progress-bar">75%</div>
     </div>
-
     <div class="warning">
-        <span>⚠</span> Regardez la vidéo ci-dessous 👇 Ne cliquez pas sur « Retour » et ne quittez pas cette page avant de l'avoir regardée...
+        <span>⚠</span> Regardez la vidéo ci-dessous 👇 Ne cliquez pas sur « Retour » et ne quittez pas cette page avant d’avoir regardé...
     </div>
     
-    <vturb-smartplayer id="vid-6a9c5a3f1097df4734891e72" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
-        <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 132.22222222222223% 0 0; z-index: 0; background-color: black;"></div>
-    </vturb-smartplayer>
-
-    <script type="text/javascript">
-        var s=document.createElement("script");
-        s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6a9c5a3f1097df4734891e72/v4/player.js",
-        s.async=!0,
-        document.head.appendChild(s);
-    </script>
+	<vturb-smartplayer id="vid-6a9c5a3f1097df4734891e72" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 132.22222222222223% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6a9c5a3f1097df4734891e72/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+   
    
     <br>
 
@@ -252,35 +242,31 @@
         <a href="https://www.checkout-ds24.com/answer/yes?template=light" class="btn-yes" id="esconder">
             CLIQUEZ ICI POUR ACCÉDER MAINTENANT
         </a>
-
         <a href="https://www.checkout-ds24.com/answer/no" class="btn-no" id="esconder">
             Non, je préfère perdre cette chance pour toujours
         </a>
     </div>
 
-    <!-- COMPTE À REBOURS ROUGE (sous les boutons) -->
+    <!-- COUNTDOWN ROUGE (sous les boutons) -->
     <div class="countdown-box" id="esconder">
-        <div class="countdown-text">Cliquez sur le bouton vert avant que le temps ne s'écoule</div>
+        <div class="countdown-text">Cliquez sur le bouton vert avant que le temps ne soit écoulé</div>
         <div class="countdown-timer" id="countdown">10:00</div>
     </div>
 
+  
     <!-- Grande marge à la fin de la page -->
     <div style="height: 150px; width: 100%;"></div>
-
     <script>
-        // MODIFIEZ LE LIEN POUR LA PAGE QUE VOUS SOUHAITEZ AFFICHER LORSQUE L'UTILISATEUR TENTE DE QUITTER
+        // MODIFIEZ LE LIEN VERS LA PAGE QUE VOUS SOUHAITEZ AFFICHER LORSQUE L’UTILISATEUR TENTE DE QUITTER
         const link = 'https://www.checkout-ds24.com/answer/yes?template=light';
-
         function setBackRedirect(url) {
             let urlBackRedirect = url;
             urlBackRedirect = urlBackRedirect.trim() +
                 (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
                 document.location.search.replace('?', '').toString();
-
             history.pushState({}, '', location.href);
             history.pushState({}, '', location.href);
             history.pushState({}, '', location.href);
-
             window.addEventListener('popstate', () => {
                 console.log('onpopstate', urlBackRedirect);
                 setTimeout(() => {
@@ -288,7 +274,6 @@
                 }, 1);
             });
         }
-
         setBackRedirect(link);
 
         // COMPTE À REBOURS DE 10 MINUTES
@@ -297,26 +282,22 @@
 
         const timer = setInterval(() => {
             totalSeconds--;
-
             if (totalSeconds < 0) {
                 clearInterval(timer);
                 countdownEl.textContent = "00:00";
                 return;
             }
-
             const minutes = Math.floor(totalSeconds / 60);
             const seconds = totalSeconds % 60;
-
             countdownEl.textContent = 
                 String(minutes).padStart(2, '0') + ':' + 
                 String(seconds).padStart(2, '0');
         }, 1000);
     </script>
-
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
-
     <div class="sticky-warning-bar">
-        ⚠️ Il est obligatoire de regarder la vidéo jusqu'à la fin afin d'éviter les erreurs.
+        ⚠️ Il est obligatoire de regarder la vidéo jusqu’à la fin afin d’éviter les erreurs.
     </div>
 </body>
 </html>
+```
