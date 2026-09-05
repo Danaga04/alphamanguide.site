@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
     <script>digistoreUpsell()</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>purchase under review</title>
+    <title>achat en cours de vérification</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
@@ -132,7 +132,7 @@
             font-weight: 700;
             text-decoration: underline;
         }
-        /* ANIMAÇÃO */
+        /* ANIMATION */
         @keyframes pulse-green {
             0% { transform: scale(1); }
             50% { transform: scale(1.04); }
@@ -179,7 +179,7 @@
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
         }
 
-        /* IMAGEM */
+        /* IMAGE */
         .upsell-image {
             display: block;
             max-width: 100%;
@@ -219,55 +219,68 @@
 </head>
 <body>
     <div class="header">
-        <span class="title-tag">CONGRATULATIONS! BUT...</span>
+        <span class="title-tag">FÉLICITATIONS ! MAIS...</span>
         <div class="header-msg">
-            WATCH THE VIDEO BELOW SO YOU DON'T MISS IT—THAT'S WHERE I REVEAL THE PRAYER:
+            REGARDEZ LA VIDÉO CI-DESSOUS POUR NE PAS LA MANQUER — C'EST LÀ QUE JE RÉVÈLE LA PRIÈRE :
         </div>
     </div>
-    <div class="step">STEP 3 OF 4</div>
+
+    <div class="step">ÉTAPE 3 SUR 4</div>
+
     <div class="progress">
         <div class="progress-bar">75%</div>
     </div>
+
     <div class="warning">
-        <span>⚠</span> Watch the video below 👇 Do not click “Back” or leave this page before watching...
+        <span>⚠</span> Regardez la vidéo ci-dessous 👇 Ne cliquez pas sur « Retour » et ne quittez pas cette page avant de l'avoir regardée...
     </div>
     
-	<vturb-smartplayer id="vid-6a3ac338f78cf3a504b2960d" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 178.21782178217822% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6a3ac338f78cf3a504b2960d/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
-   
-   
-   
+    <vturb-smartplayer id="vid-6a9c5a3f1097df4734891e72" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
+        <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 132.22222222222223% 0 0; z-index: 0; background-color: black;"></div>
+    </vturb-smartplayer>
+
+    <script type="text/javascript">
+        var s=document.createElement("script");
+        s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6a9c5a3f1097df4734891e72/v4/player.js",
+        s.async=!0,
+        document.head.appendChild(s);
+    </script>
    
     <br>
 
     <div class="decision-container">
         <a href="https://www.checkout-ds24.com/answer/yes?template=light" class="btn-yes" id="esconder">
-            CLICK HERE TO ACCESS NOW
+            CLIQUEZ ICI POUR ACCÉDER MAINTENANT
         </a>
+
         <a href="https://www.checkout-ds24.com/answer/no" class="btn-no" id="esconder">
-            No, I'd rather lose that chance forever
+            Non, je préfère perdre cette chance pour toujours
         </a>
     </div>
 
-    <!-- COUNTDOWN VERMELHO (abaixo dos botões) -->
+    <!-- COMPTE À REBOURS ROUGE (sous les boutons) -->
     <div class="countdown-box" id="esconder">
-        <div class="countdown-text">Click the green button before time runs out</div>
+        <div class="countdown-text">Cliquez sur le bouton vert avant que le temps ne s'écoule</div>
         <div class="countdown-timer" id="countdown">10:00</div>
     </div>
 
-  
-    <!-- Grande margem no final da página -->
+    <!-- Grande marge à la fin de la page -->
     <div style="height: 150px; width: 100%;"></div>
+
     <script>
-        // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+        // MODIFIEZ LE LIEN POUR LA PAGE QUE VOUS SOUHAITEZ AFFICHER LORSQUE L'UTILISATEUR TENTE DE QUITTER
         const link = 'https://www.checkout-ds24.com/answer/yes?template=light';
+
         function setBackRedirect(url) {
             let urlBackRedirect = url;
             urlBackRedirect = urlBackRedirect.trim() +
                 (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
                 document.location.search.replace('?', '').toString();
+
             history.pushState({}, '', location.href);
             history.pushState({}, '', location.href);
             history.pushState({}, '', location.href);
+
             window.addEventListener('popstate', () => {
                 console.log('onpopstate', urlBackRedirect);
                 setTimeout(() => {
@@ -275,29 +288,35 @@
                 }, 1);
             });
         }
+
         setBackRedirect(link);
 
-        // COUNTDOWN 10 MINUTOS
+        // COMPTE À REBOURS DE 10 MINUTES
         let totalSeconds = 10 * 60;
         const countdownEl = document.getElementById('countdown');
 
         const timer = setInterval(() => {
             totalSeconds--;
+
             if (totalSeconds < 0) {
                 clearInterval(timer);
                 countdownEl.textContent = "00:00";
                 return;
             }
+
             const minutes = Math.floor(totalSeconds / 60);
             const seconds = totalSeconds % 60;
+
             countdownEl.textContent = 
                 String(minutes).padStart(2, '0') + ':' + 
                 String(seconds).padStart(2, '0');
         }, 1000);
     </script>
+
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
     <div class="sticky-warning-bar">
-        ⚠️ It is mandatory to watch the video until the end to avoid errors.
+        ⚠️ Il est obligatoire de regarder la vidéo jusqu'à la fin afin d'éviter les erreurs.
     </div>
 </body>
 </html>
