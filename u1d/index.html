@@ -262,28 +262,7 @@
     <div style="height: 150px; width: 100%;"></div>
 
     <script>
-        // MODIFIEZ LE LIEN VERS LA PAGE QUE VOUS SOUHAITEZ AFFICHER LORSQUE L'UTILISATEUR TENTE DE QUITTER
-        const link = 'https://www.checkout-ds24.com/answer/yes?template=light';
-
-        function setBackRedirect(url) {
-            let urlBackRedirect = url;
-            urlBackRedirect = urlBackRedirect.trim() +
-                (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
-                document.location.search.replace('?', '').toString();
-
-            history.pushState({}, '', location.href);
-            history.pushState({}, '', location.href);
-            history.pushState({}, '', location.href);
-
-            window.addEventListener('popstate', () => {
-                console.log('onpopstate', urlBackRedirect);
-                setTimeout(() => {
-                    location.href = urlBackRedirect;
-                }, 1);
-            });
-        }
-
-        setBackRedirect(link);
+        
 
         // COMPTE À REBOURS DE 10 MINUTES
         let totalSeconds = 10 * 60;
