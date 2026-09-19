@@ -1,13 +1,16 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
     <script>digistoreUpsell()</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>achat en cours de vérification</title>
+
+    <title>Purchase Verification in Progress</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -19,11 +22,13 @@
             line-height: 1.4;
             text-align: center;
         }
+
         /* HEADER */
         .header {
             background: linear-gradient(90deg, #d80000, #7a0000);
             padding: 20px 10px;
         }
+
         .title-tag {
             background: #fff;
             color: #d80000;
@@ -32,43 +37,21 @@
             padding: 5px 10px;
             display: inline-block;
         }
-        /* EMAIL */
+
+        /* HEADER MESSAGE */
         .header-msg {
             margin-top: 15px;
             font-size: 15px;
             font-weight: 500;
         }
-        .email-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            margin-top: 5px;
-            flex-wrap: wrap;
-        }
-        .email-text {
-            font-weight: 700;
-            text-decoration: underline;
-        }
-        .copy-btn {
-            background: #fff;
-            color: #d80000;
-            border: none;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 12px;
-            cursor: pointer;
-        }
-        .copy-btn:active {
-            transform: scale(0.95);
-        }
+
         /* PROGRESS */
         .step {
             font-size: 18px;
             font-weight: 700;
             margin: 20px 0 10px;
         }
+
         .progress {
             width: 90%;
             margin: 0 auto;
@@ -76,6 +59,7 @@
             border-radius: 5px;
             overflow: hidden;
         }
+
         .progress-bar {
             width: 75%;
             height: 100%;
@@ -85,34 +69,31 @@
             justify-content: center;
             font-weight: 700;
         }
+
         /* WARNING */
         .warning {
             font-size: 14px;
             margin: 10px 0;
         }
+
         .warning span {
             color: #ffcc00;
             font-size: 18px;
         }
-        /* PLAYER */
-        vturb-smartplayer {
-            display: block;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        /* BUTTONS */
+
+        /* BUTTON CONTAINER */
         .decision-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
             width: 100%;
             max-width: 500px;
             margin: 0 auto;
             padding: 20px;
             box-sizing: border-box;
         }
+
+        /* GREEN PULSING BUTTON */
         .btn-yes {
             width: 100%;
             background: #25D366;
@@ -126,19 +107,31 @@
             box-sizing: border-box;
             animation: pulse-green 1.5s infinite;
             display: inline-block;
+            box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
         }
-        .btn-no {
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: underline;
+
+        .btn-yes:hover {
+            background: #20bd5a;
         }
-        /* ANIMAÇÃO */
+
+        /* PULSE ANIMATION */
         @keyframes pulse-green {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.04); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            50% {
+                transform: scale(1.04);
+                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
+
         /* STICKY FOOTER WARNING */
         .sticky-warning-bar {
             position: fixed;
@@ -164,6 +157,7 @@
             max-width: 500px;
             padding: 0 15px;
         }
+
         .countdown-text {
             font-size: 16px;
             font-weight: 700;
@@ -172,6 +166,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         .countdown-timer {
             font-size: 42px;
             font-weight: 800;
@@ -180,117 +175,148 @@
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
         }
 
-        /* IMAGEM */
-        .upsell-image {
-            display: block;
-            max-width: 100%;
-            width: 100%;
-            max-width: 500px;
-            margin: 20px auto;
-            border-radius: 8px;
-        }
-
         /* MOBILE */
         @media (max-width: 480px) {
+
             .btn-yes {
                 font-size: 18px;
                 padding: 15px;
             }
-            .btn-no {
-                font-size: 15px;
-            }
+
             .title-tag {
                 font-size: 18px;
             }
+
             .header-msg {
                 font-size: 14px;
             }
+
             .sticky-warning-bar {
                 font-size: 12px;
                 padding: 10px 5px;
             }
+
             .countdown-timer {
                 font-size: 36px;
             }
+
             .countdown-text {
                 font-size: 14px;
             }
         }
     </style>
 </head>
+
 <body>
+
     <div class="header">
-        <span class="title-tag">FÉLICITATIONS ! MAIS...</span>
+
+        <span class="title-tag">
+            CONGRATULATIONS! BUT...
+        </span>
+
         <div class="header-msg">
-            REGARDEZ LA VIDÉO CI-DESSOUS POUR NE PAS PASSER À CÔTÉ — C'EST LÀ QUE JE RÉVÈLE LA PRIÈRE :
+            WATCH THE VIDEO BELOW SO YOU DON'T MISS OUT:
+        </div>
+
+    </div>
+
+    <div class="step">
+        STEP 3 OF 4
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar">
+            75%
         </div>
     </div>
 
-    <div class="step">ÉTAPE 3 SUR 4</div>
-
-    <div class="progress">
-        <div class="progress-bar">75%</div>
-    </div>
-
     <div class="warning">
-        <span>⚠</span> Regardez la vidéo ci-dessous 👇 Ne cliquez pas sur « Retour » et ne quittez pas cette page avant d'avoir regardé la vidéo...
+        <span>⚠</span>
+        Watch the video below 👇 Do not click "Back" or leave this page before watching the video...
     </div>
-  
-    <vturb-smartplayer id="vid-6aa40f8a895fdcef46905367" style="display: block; margin: 0 auto; width: 100%; "><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> 
-    <script type="text/javascript"> 
-        var s=document.createElement("script"); 
-        s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6aa40f8a895fdcef46905367/v4/player.js", 
-        s.async=!0,
-        document.head.appendChild(s); 
-    </script>
+
+
+<vturb-smartplayer id="vid-6aae9a4548ba928c1d0d7082" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 178.05555555555554% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/6aae9a4548ba928c1d0d7082/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+
+
     
+
     <br>
 
+    <!-- GREEN PULSING BUTTON -->
     <div class="decision-container">
         
-<digistore-upsell-button template="light"></digistore-upsell-button>
+
+  <a
+    href="https://www.checkout-ds24.com/answer/yes?template=light"
+    class="btn-yes"
+    id="esconder"
+>
+    ACCESS APP NOW!
+</a>
         
     </div>
 
-    <!-- COMPTE À REBOURS ROUGE (sous le bouton) -->
+    <!-- RED COUNTDOWN TIMER -->
     <div class="countdown-box" id="esconder">
-        <div class="countdown-text">Cliquez sur le bouton vert avant que le temps ne soit écoulé</div>
-        <div class="countdown-timer" id="countdown">10:00</div>
+
+        <div class="countdown-text">
+            CLICK THE GREEN BUTTON BEFORE THE TIMER RUNS OUT
+        </div>
+
+        <div class="countdown-timer" id="countdown">
+            10:00
+        </div>
+
     </div>
 
-    <!-- Grande marge à la fin de la page -->
+    <!-- LARGE SPACE AT THE END OF THE PAGE -->
     <div style="height: 150px; width: 100%;"></div>
 
     <script>
-        
 
-        // COMPTE À REBOURS DE 10 MINUTES
+        // 10-MINUTE COUNTDOWN
         let totalSeconds = 10 * 60;
+
         const countdownEl = document.getElementById('countdown');
 
         const timer = setInterval(() => {
+
             totalSeconds--;
 
             if (totalSeconds < 0) {
+
                 clearInterval(timer);
+
                 countdownEl.textContent = "00:00";
+
                 return;
             }
 
             const minutes = Math.floor(totalSeconds / 60);
+
             const seconds = totalSeconds % 60;
 
-            countdownEl.textContent = 
-                String(minutes).padStart(2, '0') + ':' + 
+            countdownEl.textContent =
+                String(minutes).padStart(2, '0') + ':' +
                 String(seconds).padStart(2, '0');
+
         }, 1000);
+
     </script>
 
-    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+    <script
+        src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+        data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids
+        async
+        defer>
+    </script>
 
     <div class="sticky-warning-bar">
-        ⚠️ Il est obligatoire de regarder la vidéo jusqu'à la fin afin d'éviter les erreurs.
+        ⚠️ IT IS REQUIRED TO WATCH THE VIDEO UNTIL THE END TO AVOID ERRORS.
     </div>
+
 </body>
 </html>
-
